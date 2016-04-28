@@ -1,0 +1,12 @@
+[Unit]
+Description=Cookiebot 5000
+After=network.target auditd.service
+
+[Service]
+ExecStart=/home/pi/cookiebot/cookiebot.py
+KillMode=process
+Restart=on-failure
+
+[Install]
+WantedBy=multi-user.target
+Alias=cookiebot.service
